@@ -1,0 +1,17 @@
+watchtower, automatic update container - [link](https://containrrr.dev/watchtower/)
+```
+docker run -d \
+--name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-e WATCHTOWER_NOTIFICATIONS=slack \
+-e WATCHTOWER_NOTIFICATION_SLACK_HOOK_URL="https://discord.com/api/webhooks/857857581602701344/nVJ8ZrKZiNNkhqEUrhhSjWdCQu04mq4NBSt0MAlUm3vDlJZnDInNgmivAv7nwofRT3vC/slack" \
+containrrr/watchtower -i 43200
+```
+
+update all images - `docker images |grep -v REPOSITORY|awk '{print $1}'|xargs -L1 docker pull`
+
+stop all container - `docker stop $(docker ps -q)`
+
+start all container - `docker start $(docker ps -f "status=exited" -q)`
+
+update portainer - [link](https://documentation.portainer.io/v2.0/upgrade/upddocker/)
