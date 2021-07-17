@@ -1,0 +1,15 @@
+.q-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.q-subcontainer {
+  flex: 1 0 auto;
+}
+h1 {
+  padding: 15px 0px 20px 0px;
+}

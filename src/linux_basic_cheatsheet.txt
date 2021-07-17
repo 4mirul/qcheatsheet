@@ -9,3 +9,11 @@ sudo nmap -sTU -O IP-address-Here
 ```
 
 certbot - [link](https://certbot.eff.org/)
+
+prometheus archlinux - https://wiki.archlinux.org/title/Prometheus
+
+check uuid drives - `sudo blkid`
+
+check drives - `lsblk`
+
+test drive speed - ` sudo hdparm -t /dev/sda`
